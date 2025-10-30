@@ -1,0 +1,582 @@
+header {
+  background: linear-gradient(180deg, #f3c4c4, #ebbebe, #cf8a9b, #c07587);
+  color: #080808;
+  height: 70vh;
+}
+
+p {
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, .nav-link { 
+  font-family: 'poppins', sans-serif;
+}
+
+.profile {
+    width: 200px;
+    /* ukuran default */
+    aspect-ratio: 1/1;
+    /* pastiin selalu kotak */
+    border-radius: 50%;
+    overflow: hidden;
+    max-width: 100%;
+    /* biar nggak lebih lebar dari parent */
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: white;
+    /* gambar full tanpa gepeng */
+}
+
+.header-section {
+  background: linear-gradient(180deg, #fdf0f0 0%, #c07587 100%);
+  color: #080808;
+  padding: 100px 0;
+  margin-top: 5ch;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+/* PROFILE IMAGE BULAT DAN DI KANAN */
+.profile {
+  width: 350px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: auto; /* dorong ke kanan */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain ;
+  margin-top: 50px;
+}
+
+h1 {
+   font-size: 50px;
+}
+
+/* Navbar Transparan */
+.custom-navbar {
+  backdrop-filter: blur(10px); /* Efek blur kaca */
+  -webkit-backdrop-filter: blur(10px); /* Untuk Safari */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.053);
+  transition: background-color 0.3s ease;
+}
+
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand {
+  color:#945b68 !important; /* Warna teks */
+  font-weight: 500;
+}
+
+.custom-navbar .nav-link:hover {
+  color: black !important; /* Warna hover */
+}
+
+/* Tambahkan efek solid saat discroll */
+.custom-navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.btn {
+  background-color: #a35f6d;
+}
+
+.btn:hover {
+  background-color: #6d3845;
+}
+
+#about .text-about {
+  font-weight: 500;
+}
+
+#services {
+  background: linear-gradient(200deg, #f3c4c4, #ebbebe, #cf8a9b, #c07587);
+}
+
+.service-card h4 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.service-card {
+  background-color: #ffffff; 
+  border-radius: 15px;
+  padding: 20px 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+/* highlight */
+.product-highlight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+/* Biar highlight bawah posisinya ke tengah */
+.product-highlight2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0;
+}
+
+/* Biar gambar kucing full di kanan halaman */
+.product-highlight2 {
+  display: flex;
+  justify-content: flex-end; /* dorong isi ke kanan */
+  align-items: center;
+  padding: 80px 0;
+}
+
+.product-highlight2 .product-container {
+  display: flex;
+  flex-direction: row-reverse; /* gambar kanan, teks kiri */
+  align-items: center;
+  gap: 60px;
+  max-width: 1100px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px;
+}
+
+.product-highlight2 .product-image img {
+  width: 480px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+section {
+  margin: 0;
+}
+
+
+.product-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1100px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.product-image img {
+  width: 480px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.product-label {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.product-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.rating span {
+  color: #555;
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+
+.product-price {
+  margin: 0 0;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 10px;
+}
+
+.new-price {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #111;
+}
+
+.description {
+  line-height: 1.6;
+  font-weight: 600;
+  color: #444;
+  margin: 20px 0;
+}
+
+.variant {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.quantity input {
+  width: 40px;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.buy-btn {
+  background: #cf8a9b;
+  color: #fffdfd;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buy-btn:hover {
+  background: #965b68;
+  color: white;
+}
+
+#products {
+  background: linear-gradient(180deg, #f3c4c4, #ebbebe, #cf8a9b, #c07587);
+  padding: 80px 0;
+  color: #222;
+}
+
+
+.product-card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+  object-fit: contain; /* biar seluruh badan kucing kelihatan */
+  border-radius: 12px;
+  background-color: #fff; /* kasih background biar rapi */
+  padding: 4px; /* tambahkan ruang agar tidak mepet */
+}
+
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.product-card h5 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.product-card p {
+  color: #666;
+}
+
+.product-card .btn {
+  background-color: #a35f6d;
+  border: none;
+  transition: 0.3s;
+}
+
+.product-card .btn:hover {
+  background-color: #6d3845;
+  color: #fff;
+}
+
+/* tombol perlengkapan */
+
+
+/* CTA Section */
+.cta-section {
+  background-color: rgb(252, 250, 250);
+  color: #0e0d0d;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.cta-text {
+  max-width: 500px;
+  z-index: 2;
+}
+
+.cta-text h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #965b68;
+}
+
+.cta-text p {
+  font-size: 1rem;
+  color: #070707;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.cta-btn {
+  background: #c07587;
+  color: #f7f4f5;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.cta-btn:hover {
+  background: #965b68;
+  color: #fff;
+}
+
+/* warna tombol kucing & perlengkapam */
+/* Tombol kategori produk */
+#btn-kucing,
+#btn-perlengkapan {
+  background-color: #a35f6d;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+  transition: 0.3s ease;
+}
+
+#btn-kucing:hover,
+#btn-perlengkapan:hover {
+  background-color: #a35f6d;
+  color: #fff;
+}
+
+/* Tombol aktif */
+.active-btn {
+  background-color: #6d3845 !important; /* warna gelap */
+  color: #fff !important;
+  border: none !important;
+}
+
+
+/* Lingkaran dekoratif */
+.cta-shapes {
+  position: relative;
+  width: 400px;
+  height: 300px;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #cf8a9b;
+}
+
+.circle1 {
+  width: 250px;
+  height: 250px;
+  top: 0;
+  left: 0;
+}
+
+.circle2 {
+  width: 200px;
+  aspect-ratio: 1/1;
+  background: rgba(255, 255, 255, 0.15);
+  top: 30px;
+  left: 30px;
+  border-radius: 50%;
+  overflow: hidden; /* supaya gambar tetap di dalam lingkaran */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 13px;
+}
+
+.circle2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* biar isi penuh tanpa gepeng */
+}
+
+/* testimonial */
+
+#testimonial {
+  background: linear-gradient(180deg, #fdf0f0 0%, #965b68 100%);
+}
+
+.testimonial-card {
+  transition: all 0.3s ease;
+  border: 1px solid #f0d0d0;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.testimonial-card img {
+  object-fit: cover;
+  border: 3px solid #cf8a9b;
+}
+
+.footer {
+  background-color: white; /* warna seperti contoh kamu */
+}
+
+.footer h5 {
+  color: #965b68;
+  letter-spacing: 1px;
+}
+
+.footer p {
+  color: #965b68;
+  font-size: 1rem;
+}
+
+.footer .social-icon {
+  color: #965b68;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+
+.footer .social-icon:hover {
+  color: #4e232d;
+  transform: scale(1.2);
+}
+
+.footer hr {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .cta-section .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cta-shapes {
+    margin-top: 40px;
+  }
+}
+
+
+/* Responsif */
+@media (max-width: 768px) {
+  .product-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-image img {
+    width: 100%;
+  }
+}
+
+
+/* RESPONSIVE TABLET (iPad) */
+@media (max-width: 1024px) and (min-width: 768px) {
+
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 767px) {
+    header {
+        height: 50vh;
+        margin-top: 0px;
+    }
+    .row {
+        padding-left: 15px;
+    }
+}
+
+/* Statistik Section */
+.stats-container {
+  margin-top: 20px;
+}
+
+.pinkie-card {
+  background-color: #fcbbca; /* pink lembut */
+  border-radius: 15px;
+  padding: 20px 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pinkie-card-large:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.pinkie-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.pinkie-card-large {
+  background-color: #d38396; /* pink sedikit lebih tua */
+  border-radius: 20px;
+  padding: 25px 10px;
+  width: 100%;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+.active-btn {
+  background-color: #4b2c2c; /* warna gelap lembut */
+  color: #fff;
+  border-color: #4b2c2c;
+}
+
+.btn-sm {
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+
+/* Responsif di layar kecil */
+@media (max-width: 767px) {
+  .pinkie-card,
+  .pinkie-card-large {
+    margin-bottom: 10px;
+  }
+}
+
+
+
