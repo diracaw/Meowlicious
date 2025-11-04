@@ -159,8 +159,20 @@ h1 {
   padding: 40px;
 }
 
+.product-highlight2 .product-info {
+  text-align: left;            /* biar semua teks rata kiri */
+  align-items: flex-start;     /* biar posisi elemen sejajar kiri */
+}
+
+.product-highlight2 .description {
+  text-align: left;            /* biar paragraf deskripsi juga ikut rata kiri */
+  margin-left: 0;              /* hapus jarak kiri kalau ada */
+}
+
+
+
 .product-highlight2 .product-image img {
-  width: 480px;
+  width: 600px; /* lebih besar dari sebelumnya */
   border-radius: 6px;
   object-fit: cover;
 }
@@ -274,7 +286,6 @@ section {
   padding: 80px 0;
   color: #222;
 }
-
 
 .product-card {
   background-color: #fff;
@@ -442,19 +453,17 @@ section {
   background: linear-gradient(180deg, #fdf0f0 0%, #965b68 100%);
 }
 
+/* Biar foto testimonial di tengah */
 .testimonial-card {
-  transition: all 0.3s ease;
-  border: 1px solid #f0d0d0;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ini bikin isi card (termasuk foto) ke tengah */
+  text-align: center;
 }
 
 .testimonial-card img {
-  object-fit: cover;
-  border: 3px solid #cf8a9b;
+  display: block;
+  margin: 0 auto 15px auto; /* tengahin foto + kasih jarak bawah */
 }
 
 .footer {
@@ -475,6 +484,7 @@ section {
   color: #965b68;
   font-size: 1.4rem;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .footer .social-icon:hover {
@@ -484,47 +494,6 @@ section {
 
 .footer hr {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-/* Responsif */
-@media (max-width: 768px) {
-  .cta-section .container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .cta-shapes {
-    margin-top: 40px;
-  }
-}
-
-
-/* Responsif */
-@media (max-width: 768px) {
-  .product-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .product-image img {
-    width: 100%;
-  }
-}
-
-
-/* RESPONSIVE TABLET (iPad) */
-@media (max-width: 1024px) and (min-width: 768px) {
-
-}
-
-/* RESPONSIVE MOBILE */
-@media (max-width: 767px) {
-    header {
-        height: 50vh;
-        margin-top: 0px;
-    }
-    .row {
-        padding-left: 15px;
-    }
 }
 
 /* Statistik Section */
@@ -569,14 +538,456 @@ section {
   border-radius: 20px;
 }
 
+/* === RESPONSIVE DESIGN === */
 
-/* Responsif di layar kecil */
-@media (max-width: 767px) {
-  .pinkie-card,
-  .pinkie-card-large {
-    margin-bottom: 10px;
+/* Untuk Tablet (iPad dan sejenisnya) */
+@media (max-width: 992px) {
+  /* Header section */
+  .header-section {
+    padding: 120px 0 60px;
+    text-align: center;
+  }
+
+  .header-section .col-md-6 {
+    text-align: center;
+  }
+
+  .header-title {
+    font-size: 38px;
+    margin-top: 40px; /* beri jarak dari navbar */
+  }
+
+  .profile {
+    width: 250px;
+    margin: 20px auto 0;
+  }
+
+  .profile img {
+    margin-top: 0;
+  }
+
+  .custom-navbar {
+    position: absolute !important;
+  }
+
+  /* Gambar produk di highlight */
+  .product-image img {
+    width: 350px;
+  }
+
+  .product-container,
+  .product-highlight2 .product-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .product-info {
+    margin-top: 20px;
   }
 }
 
+/* Untuk Mobile (HP) */
+@media (max-width: 576px) {
+  /* Navbar */
+  .custom-navbar {
+  position: fixed !important; /* paksa biar tetep di atas */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: white; /* biar gak transparan */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+
+  /* Header */
+  @media (max-width: 576px) {
+  .header-section {
+    text-align: left !important;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 150px; /* biar ga jenong */
+  }
+
+  .header-title {
+    text-align: left !important;
+    font-size: 33px; /* "Selamat Datang" muat satu baris */
+    line-height: 1.2;
+    white-space: normal; /* pastikan bisa tetap rapi */
+  }
+
+  .header-section p {
+    text-align: left !important;
+  }
+
+  .header-section .btn {
+    display: inline-block;
+  }
+}
+
+
+
+  .profile {
+    width: 250px; /* gambar kucing lebih kecil */
+    margin: 40px;
+    margin-bottom: 100px;
+  }
+
+  .profile img {
+    margin-top: 55px;
+  }
+
+  /* About section image */
+  #about img {
+    max-width: 90%;
+  }
+
+  /* Produk highlight */
+  .product-container,
+  .product-highlight2 .product-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .product-image img {
+    width: 280px;
+  }
+
+  .product-info {
+    margin-top: 10px;
+  }
+
+  .product-title {
+    font-size: 1.8rem;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    text-align: center;
+  }
+
+  .cta-shapes {
+    display: none; /* sembunyikan dekorasi bulat di mobile */
+  }
+
+  /* Testimonial */
+  .testimonial-card {
+    margin: 0 10px;
+  }
+
+  /* Footer */
+  footer .col-md-4 {
+    text-align: center !important;
+  }
+
+  @media (max-width: 768px) {
+  .product-container {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-image {
+    order: -1; /* gambar di atas */
+    width: 150%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .product-image img {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .product-info {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+}
+
+
+/* iPad / tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .product-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .product-image img {
+    width: 45%;
+    height: auto;
+  }
+
+  .product-info {
+    width: 50%;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .product-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* biar lebih rapi pas ditengah */
+    text-align: center; /* teks ke tengah */
+  }
+
+  .product-image img {
+    width: 60%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .product-info {
+    width: 80%;
+  }
+
+  .product-actions {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Tambahan khusus untuk highlight kedua (Ragdoll) */
+@media (max-width: 768px) {
+  .product-highlight2 .product-container {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-highlight2 .product-image {
+    order: -1; /* pastikan gambar di atas juga */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .product-highlight2 .product-image img {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .product-highlight2 .product-info {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-actions {
+    display: flex;
+    justify-content: center;
+  }
+
+  .buy-btn {
+    margin: 0 auto;
+  }
+}
+
+/* Samain semua tombol highlight (Anggora & Ragdoll) */
+.product-highlight .buy-btn,
+.product-highlight2 .buy-btn {
+  background-color: #a35f6d;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+  display: inline-block;
+  text-align: center;
+}
+
+.product-highlight .buy-btn:hover,
+.product-highlight2 .buy-btn:hover {
+  background-color: #6d3845;
+  transform: scale(1.05);
+}
+
+/* === PERBAIKAN KHUSUS RAGDOLL di iPad === */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .product-highlight2 .product-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .footer .social-icon {
+    color: #965b68;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .footer .social-icon:hover {
+    color: #4e232d;
+    transform: scale(1.2);
+  }
+
+  .product-highlight2 .product-info {
+    width: 80% !important;
+    text-align: center !important;
+  }
+
+  .product-highlight2 .product-actions {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .product-highlight2 .product-image img {
+    width: 60% !important;
+    height: auto !important;
+    margin-bottom: 15px !important;
+  }
+}
+
+/* Biar teks tetap di tengah di highlight ragdoll */
+.product-highlight2 .product-info {
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+.product-highlight2 .product-container {
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* --- FIX FINAL RAGDOLL HIGHLIGHT --- */
+.product-highlight2 .product-image img {
+  width: 600px !important; /* perbesar gambar */
+  height: auto !important;
+  border-radius: 6px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.product-highlight2 .product-info {
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+.product-highlight2 .product-container {
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 60px !important;
+}
+
+/* Responsif biar gak kebesaran di iPad/HP */
+@media (max-width: 1024px) {
+  .product-highlight2 .product-container {
+    flex-direction: column !important; /* ubah dari column-reverse ke column */
+    text-align: center !important;
+  }
+
+  .product-highlight2 .product-image img {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  .product-highlight2 .product-info {
+    text-align: center !important;
+  }
+}
+
+/* === RESPONSIVE RAGDOLL (iPad & Mobile) === */
+@media (max-width: 1024px) {
+  .product-highlight2 {
+    justify-content: center !important;
+    padding: 40px 0 !important;
+  }
+
+  .product-highlight2 .product-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 30px !important;
+  }
+
+  .product-highlight2 .product-info {
+    text-align: center !important;
+  }
+
+  .product-highlight2 .product-actions {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .product-highlight2 .product-image img {
+    width: 70% !important;
+    max-width: 350px !important;
+  }
+
+  /* Responsif tablet: rapihin posisi teks dan tombol Ragdoll */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product-highlight2 .product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .product-highlight2 .product-info h1,
+  .product-highlight2 .product-price,
+  .product-highlight2 .product-info p,
+  .product-highlight2 .product-actions {
+    text-align: center;
+    width: 100%;
+  }
+
+  .product-highlight2 .buy-btn {
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+}
+
+/* Responsif tablet: samain tampilan Ragdoll seperti Anggora */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product-highlight2 .product-info {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .product-highlight2 .product-info p {
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .product-highlight2 .product-title {
+    margin-bottom: 10px;
+  }
+
+  .product-highlight2 .product-price {
+    margin-bottom: 10px;
+  }
+
+  .product-highlight2 .buy-btn {
+    margin-top: 15px;
+  }
+}
 
 
