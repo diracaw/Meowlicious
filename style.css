@@ -459,6 +459,12 @@ section {
   flex-direction: column;
   align-items: center; /* ini bikin isi card (termasuk foto) ke tengah */
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05); /* membesarkan card 5% */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* efek bayangan biar keliatan naik */
 }
 
 .testimonial-card img {
